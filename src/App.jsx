@@ -1,47 +1,26 @@
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
+import KanaDiv from './components/KanaDiv';
 import hiragana from './data/hiragana';
 import katakana from './data/katakana';
 
 function App() {
-  const hiraganaDiv = hiragana.map((hiragana) => {
-    return (
-      <div id={hiragana.id} className="m-5 flex flex-col justify-end">
-        {hiragana.kana.map((kana) => {
-          return (
-            <>
-              <p className="font-bold">{kana[0].hiragana}</p>
-              <p className="text-slate-400">{kana[0].romanji}</p>
-            </>
-          );
-        })}
-        <input type="checkbox" className="mt-6" />
-      </div>
-    );
-  });
+  const [picked, setPicked] = useState([]);
 
-  const katakanaDiv = katakana.map((katakana) => {
-    return (
-      <div id={katakana.id} className="m-5 flex flex-col justify-end">
-        {katakana.kana.map((kana) => {
-          return (
-            <>
-              <p className="font-bold">{kana[0].katakana}</p>
-              <p className="text-slate-400">{kana[0].romanji}</p>
-            </>
-          );
-        })}
-        <input type="checkbox" className="mt-6" />
-      </div>
-    );
-  });
+  function getId(id) {
+    console.log(id);
+  }
 
   return (
     <div className="min-h-screen bg-slate-800 text-white text-center">
       <Header />
 
-      <div className="kana-div">{hiraganaDiv}</div>
-      <div className="kana-div">{katakanaDiv}</div>
+      <div className="kana-div">
+        <KanaDiv kanas={hiragana} getId={getId} />
+      </div>
+      <div className="kana-div">
+        <KanaDiv kanas={katakana} getId={getId} />
+      </div>
 
       <button className="button">Start</button>
     </div>
