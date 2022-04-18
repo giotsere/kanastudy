@@ -10,4 +10,16 @@
   .button {
     @apply tracking-wider mb-5 font-bold border-solid border-2 rounded-md border-white py-2 px-8 hover:bg-white hover:text-slate-800;
   }
+
+  .kanji {
+    @apply text-teal-500;
+  }
+
+  .hiragana {
+    @apply text-yellow-500;
+  }
+
+  .katakana {
+    @apply text-pink-500;
+  }
 }
