@@ -1,10 +1,6 @@
 import React from 'react';
 
-function KanaDiv({ kanas, getId }) {
-  function handleGetId(e) {
-    getId(e.target.parentNode.id);
-  }
-
+function KanaDiv({ kanas }) {
   const div = kanas.map((kana) => {
     return (
       <div id={kana.id} className="m-5 flex flex-col justify-end">
@@ -16,7 +12,7 @@ function KanaDiv({ kanas, getId }) {
             </>
           );
         })}
-        <input type="checkbox" className="mt-6" onClick={handleGetId} />
+        <input id={kana.id} type="checkbox" className="mt-6" />
       </div>
     );
   });

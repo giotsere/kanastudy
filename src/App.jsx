@@ -6,10 +6,42 @@ import katakana from './data/katakana';
 import KanaExplanation from './components/KanaExplanation';
 
 function App() {
-  const [picked, setPicked] = useState([]);
+  const [kanaStudy, setKanaStudy] = useState([]);
 
-  function getId(id) {
-    console.log(id);
+  function addPickedKana() {
+    let inputs = document.querySelectorAll('input');
+    let pickedArr = [];
+    let tempHiragana = [];
+    let tempKatakana = [];
+
+    inputs.forEach((input) => {
+      if (input.checked === true) {
+        pickedArr.push(parseInt(input.id));
+      }
+    });
+
+    hiragana.forEach((hiragana) => {
+      pickedArr.forEach((id) => {
+        if (hiragana.id === id) {
+          tempHiragana.push(hiragana.kana);
+        }
+      });
+    });
+
+    katakana.forEach((katakana) => {
+      pickedArr.forEach((id) => {
+        if (katakana.id === id) {
+          tempKatakana.push(katakana.kana);
+        }
+      });
+    });
+
+    let tempConvertedHiragana = [].concat(...tempHiragana);
+    let tempConvertedKatakana = [].concat(...tempKatakana);
+    let kanaStudy = tempConvertedHiragana.concat(tempConvertedKatakana);
+
+    setKanaStudy(kanaStudy);
+    console.log(kanaStudy);
   }
 
   return (
@@ -18,13 +50,15 @@ function App() {
 
       <section className="mb-10">
         <div className="kana-div">
-          <KanaDiv kanas={hiragana} getId={getId} />
+          <KanaDiv kanas={hiragana} />
         </div>
         <div className="kana-div">
-          <KanaDiv kanas={katakana} getId={getId} />
+          <KanaDiv kanas={katakana} />
         </div>
 
-        <button className="button">Start</button>
+        <button className="button" onClick={addPickedKana}>
+          Start
+        </button>
       </section>
       <section>
         <KanaExplanation />

@@ -1,6 +1,6 @@
 const katakana = [
   {
-    id: 1,
+    id: 16,
     kana: [
       [{ romanji: 'a', kana: 'ア' }],
       [{ romanji: 'i', kana: 'イ' }],
@@ -11,7 +11,7 @@ const katakana = [
     isPicked: false,
   },
   {
-    id: 2,
+    id: 17,
     kana: [
       [{ romanji: 'ka', kana: 'カ ' }],
       [{ romanji: 'ki', kana: 'キ' }],
@@ -22,7 +22,7 @@ const katakana = [
     isPicked: false,
   },
   {
-    id: 3,
+    id: 18,
     kana: [
       [{ romanji: 'sa', kana: 'サ' }],
       [{ romanji: 'shi', kana: 'シ' }],
@@ -33,7 +33,7 @@ const katakana = [
     isPicked: false,
   },
   {
-    id: 4,
+    id: 19,
     kana: [
       [{ romanji: 'ta', kana: 'タ' }],
       [{ romanji: 'chi', kana: 'チ' }],
@@ -44,7 +44,7 @@ const katakana = [
     isPicked: false,
   },
   {
-    id: 5,
+    id: 20,
     kana: [
       [{ romanji: 'na', kana: 'ナ' }],
       [{ romanji: 'ni', kana: 'ニ' }],
@@ -55,7 +55,7 @@ const katakana = [
     isPicked: false,
   },
   {
-    id: 6,
+    id: 21,
     kana: [
       [{ romanji: 'ha', kana: 'ハ' }],
       [{ romanji: 'hi', kana: 'ヒ' }],
@@ -66,7 +66,7 @@ const katakana = [
     isPicked: false,
   },
   {
-    id: 7,
+    id: 22,
     kana: [
       [{ romanji: 'ma', kana: 'マ' }],
       [{ romanji: 'mi', kana: 'ミ' }],
@@ -77,7 +77,7 @@ const katakana = [
     isPicked: false,
   },
   {
-    id: 8,
+    id: 23,
     kana: [
       [{ romanji: 'ya', kana: 'ヤ' }],
       [{ romanji: 'yu', kana: 'ユ' }],
@@ -86,7 +86,7 @@ const katakana = [
     isPicked: false,
   },
   {
-    id: 9,
+    id: 24,
     kana: [
       [{ romanji: 'ra', kana: 'ラ' }],
       [{ romanji: 'ri', kana: 'リ' }],
@@ -97,7 +97,7 @@ const katakana = [
     isPicked: false,
   },
   {
-    id: 10,
+    id: 25,
     kana: [
       [{ romanji: 'wa', kana: 'ワ' }],
       [{ romanji: 'wo', kana: 'ヲ' }],
@@ -106,7 +106,7 @@ const katakana = [
     isPicked: false,
   },
   {
-    id: 11,
+    id: 26,
     kana: [
       [{ romanji: 'ga', kana: 'ガ' }],
       [{ romanji: 'gi', kana: 'ギ' }],
@@ -117,7 +117,7 @@ const katakana = [
     isPicked: false,
   },
   {
-    id: 12,
+    id: 27,
     kana: [
       [{ romanji: 'za', kana: 'ザ' }],
       [{ romanji: 'ji', kana: 'ジ' }],
@@ -128,7 +128,7 @@ const katakana = [
     isPicked: false,
   },
   {
-    id: 13,
+    id: 28,
     kana: [
       [{ romanji: 'da', kana: 'ダ' }],
       [{ romanji: 'ji', kana: 'ヂ' }],
@@ -139,7 +139,7 @@ const katakana = [
     isPicked: false,
   },
   {
-    id: 14,
+    id: 29,
     kana: [
       [{ romanji: 'ba', kana: 'バ' }],
       [{ romanji: 'bi', kana: 'ビ' }],
@@ -150,7 +150,7 @@ const katakana = [
     isPicked: false,
   },
   {
-    id: 15,
+    id: 30,
     kana: [
       [{ romanji: 'pa', kana: 'パ' }],
       [{ romanji: 'pi', kana: 'ピ' }],
