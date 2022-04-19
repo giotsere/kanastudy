@@ -50,9 +50,13 @@ function App() {
     }
   }
 
+  function handleStudyingState() {
+    setStudying(false);
+  }
+
   return (
     <main className="min-h-screen bg-slate-800 text-white text-center">
-      <Header setStudying={setStudying} />
+      <Header handleStudyingState={handleStudyingState} />
 
       {studying ? (
         <Study kanaStudy={kanaStudy} />
