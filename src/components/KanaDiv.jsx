@@ -3,7 +3,7 @@ import React from 'react';
 function KanaDiv({ outerkana }) {
   const div = outerkana.map((innerkana) => {
     return (
-      <div id={innerkana.id} className="m-5 flex flex-col justify-end">
+      <div key={innerkana.id * 3} className="m-5 flex flex-col justify-end">
         {innerkana.kana.map((kana) => {
           return (
             <>

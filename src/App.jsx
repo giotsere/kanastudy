@@ -5,6 +5,7 @@ import hiragana from './data/hiragana';
 import katakana from './data/katakana';
 import KanaExplanation from './components/KanaExplanation';
 import Study from './components/Study';
+import Footer from './components/Footer';
 
 function App() {
   const [kanaStudy, setKanaStudy] = useState([]);
@@ -99,7 +100,7 @@ function App() {
   }
 
   return (
-    <main className="min-h-screen bg-slate-800 text-white text-center">
+    <div className="min-h-screen bg-slate-800 text-white text-center">
       <Header changeStates={changeStates} />
 
       {studying ? (
@@ -135,7 +136,8 @@ function App() {
           </section>
         </>
       )}
-    </main>
+      <Footer />
+    </div>
   );
 }
 
