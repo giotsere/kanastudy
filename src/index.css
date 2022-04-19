@@ -26,4 +26,8 @@
   .input {
     @apply w-24 mx-auto pb-2 bg-transparent border-b-2 border-b-white outline-none text-center text-4xl;
   }
+
+  .footer_p {
+    @apply pl-2 font-bold hover:underline underline-offset-4 decoration-4 decoration-rose-600;
+  }
 }

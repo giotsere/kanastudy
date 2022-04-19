@@ -8,7 +8,7 @@ function Footer() {
         <a
           href="https://www.github.com/giotsere"
           target="_blank"
-          className="pl-2 font-bold hover:underline underline-offset-4 decoration-4 decoration-rose-600"
+          className="footer_p"
         >
           Giorgi Tsereteli
         </a>
@@ -17,9 +17,9 @@ function Footer() {
       <a
         href="https://www.github.com/giotsere/kanastudy"
         target="_blank"
-        className="inline-block"
+        className="footer_p"
       >
-        <img src="src/assets/github.png" alt="" width="48px" height="48px" />
+        Source Code
       </a>
     </footer>
   );
