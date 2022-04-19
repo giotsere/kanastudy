@@ -4,7 +4,7 @@
 
 @layer components {
   .kana-div {
-    @apply text-xl mb-8 flex flex-wrap m-auto border-2 border-solid rounded-md border-white max-w-fit;
+    @apply text-xl mb-8 border-2 border-solid rounded-md border-white max-w-fit m-auto m-auto  max-w-fit;
   }
 
   .button {

@@ -45,8 +45,13 @@ function Study({ kanaStudy }) {
       <p className="mb-8 text-4xl">
         {streak} / {maxStreak}
       </p>
+      <p className="text-xl">
+        Kana picked to study: {Math.round(kanaStudy.length)}
+      </p>
       <div className="flex flex-col h-4/5 justify-center">
-        <p className="mb-12 text-8xl">{kanaStudy[currentKana][0].kana}</p>
+        <p className="mb-12 text-8xl font-bold">
+          {kanaStudy[currentKana][0].kana}
+        </p>
         <form onSubmit={handleSubmit} className="mb-12">
           <input
             type="text"
@@ -55,7 +60,7 @@ function Study({ kanaStudy }) {
             className="input"
           />
         </form>
-        <p className="text-rose-600">{error}</p>
+        <p className="text-xl text-rose-600 font-bold">{error}</p>
       </div>
     </div>
   );

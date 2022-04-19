@@ -1,10 +1,10 @@
 import React from 'react';
 
-function KanaDiv({ kanas }) {
-  const div = kanas.map((kana) => {
+function KanaDiv({ outerkana }) {
+  const div = outerkana.map((innerkana) => {
     return (
-      <div id={kana.id} className="m-5 flex flex-col justify-end">
-        {kana.kana.map((kana) => {
+      <div id={innerkana.id} className="m-5 flex flex-col justify-end">
+        {innerkana.kana.map((kana) => {
           return (
             <>
               <p className="font-bold">{kana[0].kana}</p>
@@ -12,7 +12,7 @@ function KanaDiv({ kanas }) {
             </>
           );
         })}
-        <input id={kana.id} type="checkbox" className="mt-6" />
+        <input id={innerkana.id} type="checkbox" className="mt-6" />
       </div>
     );
   });
