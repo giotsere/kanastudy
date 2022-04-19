@@ -4,9 +4,11 @@ import KanaDiv from './components/KanaDiv';
 import hiragana from './data/hiragana';
 import katakana from './data/katakana';
 import KanaExplanation from './components/KanaExplanation';
+import Study from './components/Study';
 
 function App() {
   const [kanaStudy, setKanaStudy] = useState([]);
+  const [studying, setStudying] = useState(false);
 
   function addPickedKana() {
     let inputs = document.querySelectorAll('input');
@@ -42,6 +44,7 @@ function App() {
       let kanaStudy = tempConvertedHiragana.concat(tempConvertedKatakana);
 
       setKanaStudy(kanaStudy);
+      setStudying(true);
     } else {
       alert('Pick Kana');
     }
@@ -49,25 +52,31 @@ function App() {
 
   return (
     <main className="min-h-screen bg-slate-800 text-white text-center">
-      <Header />
+      <Header setStudying={setStudying} />
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold uppercase mb-6">Hiragana</h2>
-        <div className="kana-div">
-          <KanaDiv kanas={hiragana} />
-        </div>
-        <h2 className="text-xl font-bold uppercase mb-6">Katakana</h2>
-        <div className="kana-div">
-          <KanaDiv kanas={katakana} />
-        </div>
+      {studying ? (
+        <Study kanaStudy={kanaStudy} />
+      ) : (
+        <>
+          <section className="mb-10">
+            <h2 className="text-xl font-bold uppercase mb-6">Hiragana</h2>
+            <div className="kana-div">
+              <KanaDiv kanas={hiragana} />
+            </div>
+            <h2 className="text-xl font-bold uppercase mb-6">Katakana</h2>
+            <div className="kana-div">
+              <KanaDiv kanas={katakana} />
+            </div>
 
-        <button className="button" onClick={addPickedKana}>
-          Start
-        </button>
-      </section>
-      <section>
-        <KanaExplanation />
-      </section>
+            <button className="button" onClick={addPickedKana}>
+              Start
+            </button>
+          </section>
+          <section>
+            <KanaExplanation />
+          </section>
+        </>
+      )}
     </main>
   );
 }

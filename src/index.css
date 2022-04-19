@@ -22,4 +22,8 @@
   .katakana {
     @apply text-pink-500;
   }
+
+  .input {
+    @apply w-24 mx-auto pb-2 bg-transparent border-b-2 border-b-white outline-none text-center text-4xl;
+  }
 }
