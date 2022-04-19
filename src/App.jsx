@@ -20,28 +20,31 @@ function App() {
       }
     });
 
-    hiragana.forEach((hiragana) => {
-      pickedArr.forEach((id) => {
-        if (hiragana.id === id) {
-          tempHiragana.push(hiragana.kana);
-        }
+    if (pickedArr.length != 0) {
+      hiragana.forEach((hiragana) => {
+        pickedArr.forEach((id) => {
+          if (hiragana.id === id) {
+            tempHiragana.push(hiragana.kana);
+          }
+        });
       });
-    });
 
-    katakana.forEach((katakana) => {
-      pickedArr.forEach((id) => {
-        if (katakana.id === id) {
-          tempKatakana.push(katakana.kana);
-        }
+      katakana.forEach((katakana) => {
+        pickedArr.forEach((id) => {
+          if (katakana.id === id) {
+            tempKatakana.push(katakana.kana);
+          }
+        });
       });
-    });
 
-    let tempConvertedHiragana = [].concat(...tempHiragana);
-    let tempConvertedKatakana = [].concat(...tempKatakana);
-    let kanaStudy = tempConvertedHiragana.concat(tempConvertedKatakana);
+      let tempConvertedHiragana = [].concat(...tempHiragana);
+      let tempConvertedKatakana = [].concat(...tempKatakana);
+      let kanaStudy = tempConvertedHiragana.concat(tempConvertedKatakana);
 
-    setKanaStudy(kanaStudy);
-    console.log(kanaStudy);
+      setKanaStudy(kanaStudy);
+    } else {
+      alert('Pick Kana');
+    }
   }
 
   return (
@@ -49,9 +52,11 @@ function App() {
       <Header />
 
       <section className="mb-10">
+        <h2 className="text-xl font-bold uppercase mb-6">Hiragana</h2>
         <div className="kana-div">
           <KanaDiv kanas={hiragana} />
         </div>
+        <h2 className="text-xl font-bold uppercase mb-6">Katakana</h2>
         <div className="kana-div">
           <KanaDiv kanas={katakana} />
         </div>
