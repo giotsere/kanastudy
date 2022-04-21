@@ -48,6 +48,7 @@ function Study({ kanaStudy }) {
       <p className="text-xl">
         Kana picked to study: {Math.round(kanaStudy.length)}
       </p>
+
       <div className="flex flex-col h-4/5 justify-center">
         <p className="mb-12 text-8xl font-bold">
           {kanaStudy[currentKana][0].kana}
@@ -60,6 +61,7 @@ function Study({ kanaStudy }) {
             className="input"
           />
         </form>
+        <p className="text-xl">Guess the kana reading</p>
         <p className="text-xl text-rose-600 font-bold">{error}</p>
       </div>
     </div>
