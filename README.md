@@ -19,7 +19,6 @@
 ## Stack
 
 - ReactJS
-- Vite
 - Tailwindcss
 
 Deployed on Netlify
