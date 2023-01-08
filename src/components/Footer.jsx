@@ -8,7 +8,7 @@ function Footer() {
         target="_blank"
         className="footer_p"
       >
-        Source Code 
+        Source Code.
       </a>
     </footer>
   );
